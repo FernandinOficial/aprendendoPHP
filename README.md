@@ -2,3 +2,6 @@
 
 **30/04/2024**
 Aprendendo PHP com Formulários
+
+**07/05/2024**
+Aprendendo sobre Loops de repetição DoWhile, While, For, Foreach, Arrays
