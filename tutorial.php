@@ -51,7 +51,14 @@
 
 
     // TRATANDO DATAS
-    echo ("ola");
+    // DATETIME createFromFormat
+    $data = '22. 11. 1968';
+    $start = DateTime::createFromFormat('d. m. Y', $data);
+    echo('Data Inicio:'.$start ->format('Y-m-d'));
+
+    // CALCULO COM DATAS
+    // DateInterval
+
     ?> <!----> <!--ENCERRAMENTO PARTE 2-->
 
 </body>
