@@ -7,6 +7,7 @@
 </head>
 <body>
     <form action="<?=$_SERVER["PHP_SELF"]?>" method="POST">
+        Cidade: <br>
         <input type="text" name="" placeholder="Qual seu nome?">
         <br><br>
         E-mail: <br>
