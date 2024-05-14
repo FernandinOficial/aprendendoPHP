@@ -52,14 +52,39 @@
 
     // TRATANDO DATAS
     // DATETIME createFromFormat
-    $data = '22. 11. 1968';
-    $start = DateTime::createFromFormat('d. m. Y', $data);
-    echo('Data Inicio:'.$start ->format('Y-m-d'));
+    $raw = '22. 11. 1968';
+    $start = DateTime::createFromFormat('d. m. Y', $raw);
+    echo('Data Inicio: '.$start ->format('Y-m-d'));
 
+    var_dump($raw);
     // CALCULO COM DATAS
     // DateInterval
+    //Clonar $start e add 1 mes e 6 dias
+    $end = clone $start;
+    $end -> add(new DateInterval('P1M6D')); 
+    echo('<br>Data $end: '.$end ->format('Y-m-d'));
 
-    
+    $diff = $end -> diff($start);
+    echo '<br>Diferença: '.$diff -> format('%m mês, %d dias (Total: %a dias)');
+
+    if ($start < $end) {
+        echo '<br>Começa antes do fim!';
+    }
+
+
+    $periodInterval = DateInterval::createFromDateString('first thursday');
+    $periodIterator = new DatePeriod($start, $periodInterval, $end, DatePeriod::EXCLUDE_START_DATE);
+
+    foreach ($periodIterator as $date) {
+        echo '<br>'.$date -> format('d-m-Y');
+    }
+    /*
+    Mais sobre hora:
+    http://php.net/book.datetime
+    http://php.net/function.date 
+    http://php.net/manual/pt_BR/function.date.php 
+    */
+
     ?> <!----> <!--ENCERRAMENTO PARTE 2-->
 
 </body>
