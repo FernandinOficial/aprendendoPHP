@@ -9,3 +9,5 @@ use TutoCrudPhp;
 --     UF VARCHAR(2)
 -- )
 select * from Cliente;
+
+-- DELETE FROM cliente WHERE id = ?;
