@@ -1,23 +1,22 @@
 <?php
-    $obj_mysqli = new mysqli ("127.0.0.1","root","","tutocrudphp");
+$obj_mysqli = new mysqli("127.0.0.1", "root", "", "tutocrudphp");
 
-    if ($obj_mysqli -> connect_errno) {
-        echo "Ocorre um erro na conexão com o banco de dados.";
-        exit;
-    }
+if ($obj_mysqli->connect_errno) {
+    echo "Ocorre um erro na conexão com o banco de dados.";
+    exit;
+}
 
-    mysqli_set_charset($obj_mysqli, "utf8");
+mysqli_set_charset($obj_mysqli, "utf8");
 
-    //Incluímos um código aqui...
-    $id = -1;
-    $nome = "";
-    $email = "";
-    $cidade = "";
-    $uf = "";
+//Incluímos um código aqui...
+$id = -1;
+$nome = "";
+$email = "";
+$cidade = "";
+$uf = "";
 
-   // Validando a existência dos dados
-if (isset($_POST["nome"]) && isset($_POST["email"]) && isset($_POST["cidade"]) && isset($_POST["uf"])) 
-{
+// Validando a existência dos dados
+if (isset($_POST["nome"]) && isset($_POST["email"]) && isset($_POST["cidade"]) && isset($_POST["uf"])) {
     if (empty($_POST["nome"])) {
         $erro = "Campo nome obrigatório";
     } else if (empty($_POST["email"])) {
@@ -27,8 +26,7 @@ if (isset($_POST["nome"]) && isset($_POST["email"]) && isset($_POST["cidade"]) &
         //Agora, o $id, pode vir com o valor -1, que nos indica novo registro, 
         //ou, vir com um valor diferente de -1, ou seja, 
         //o código do registro no banco, que nos indica alteração dos dados.
-        
-        // $id = $_POST["id"];
+
         $nome = $_POST["nome"];
         $email = $_POST["email"];
         $cidade = $_POST["cidade"];
@@ -38,7 +36,7 @@ if (isset($_POST["nome"]) && isset($_POST["email"]) && isset($_POST["cidade"]) &
         if ($id == -1) {
             $stmt = $obj_mysqli->prepare("INSERT INTO `cliente` (`nome`, `email`, `cidade`, `uf`) VALUES (?, ?, ?, ?)");
             $stmt->bind_param('ssss', $nome, $email, $cidade, $uf);
-        
+
             if (!$stmt->execute()) {
                 $erro = $stmt->error;
             } else {
@@ -46,9 +44,9 @@ if (isset($_POST["nome"]) && isset($_POST["email"]) && isset($_POST["cidade"]) &
                 exit;
             }
         } elseif (is_numeric($id) && $id >= 1) {
-            $stmt = $obj_mysqli->prepare("UPDATE `cliente` SET `nome`=?, `email`=?, `cidade`=?, `uf`=? WHERE `id` = ?");
+            $stmt = $obj_mysqli->prepare("UPDATE `cliente` SET `nome`=?, `email`=?, `cidade`=?, `uf`=? WHERE `id`=?");
             $stmt->bind_param('ssssi', $nome, $email, $cidade, $uf, $id);
-        
+
             if (!$stmt->execute()) {
                 $erro = $stmt->error;
             } else {
@@ -58,16 +56,14 @@ if (isset($_POST["nome"]) && isset($_POST["email"]) && isset($_POST["cidade"]) &
         } else {
             $erro = "Número inválido";
         }
-        
     }
 }
-if(isset($_GET["id"]) && is_numeric($_GET["id"])) //Incluimos aqui...
+if (isset($_GET["id"]) && is_numeric($_GET["id"])) //Incluimos aqui...
 {
     //..,pegamos aqui o id passado...
-    $id = (int)$_GET["id"];
+    $id = (int) $_GET["id"];
 
-    if(isset($_GET["del"]))
-    {
+    if (isset($_GET["del"])) {
         $stmt = $obj_mysqli->prepare("DELETE FROM `cliente` WHERE id = ?");
         $stmt->bind_param("i", $id);
         $stmt->execute();
@@ -83,7 +79,7 @@ if(isset($_GET["id"]) && is_numeric($_GET["id"])) //Incluimos aqui...
     $stmt->bind_param("i", $id);
 
     //...mandamos executar a consulta...
-    $stmt -> execute();
+    $stmt->execute();
 
     //...retornamos o resultado, e atribuímos à variável $result...
     $result = $stmt->get_result();
@@ -103,20 +99,22 @@ if(isset($_GET["id"]) && is_numeric($_GET["id"])) //Incluimos aqui...
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUD com PHP, de forma simples e fácil</title>
 </head>
+
 <body>
     <?php
-        if(isset($erro))
-            echo '<div style="color:#F00">'.$erro.'</div><br/><br/>';
-        else if(isset($sucesso))
-            echo '<div style="color:#00F">'.$sucesso.'</div><br/><br/>';
+    if (isset($erro))
+        echo '<div style="color:#F00">' . $erro . '</div><br/><br/>';
+    else if (isset($sucesso))
+        echo '<div style="color:#00F">' . $sucesso . '</div><br/><br/>';
     ?>
 
-    <form action="<?=$_SERVER["PHP_SELF"]?>" method="POST">
+    <form action="<?= $_SERVER["PHP_SELF"] ?>" method="POST">
         Nome: <br>
         <input type="text" name="nome" placeholder="Qual seu nome?">
         <br><br>
@@ -143,22 +141,22 @@ if(isset($_GET["id"]) && is_numeric($_GET["id"])) //Incluimos aqui...
             <th><strong>UF</strong></th>
             <th><strong>#</strong></th>
         </tr>
-    
-    <?php
-        $result = $obj_mysqli->query("SELECT * FROM `cliente`");   
-        while($aux_query = $result->fetch_assoc())
-            {
-                echo '<tr>';
-                echo '  <td>'.$aux_query["Id"].'</td>';
-                echo '  <td>'.$aux_query["Nome"].'</td>';
-                echo '  <td>'.$aux_query["Email"].'</td>';
-                echo '  <td>'.$aux_query["Cidade"].'</td>';
-                echo '  <td>'.$aux_query["UF"].'</td>';
-                echo '<td><a style="color: green;text-decoration: none;" href="'.$_SERVER["PHP_SELF"].'?Id='.$aux_query["Id"].'">Editar</a></td>';
-                echo '<td><a style="color: red;text-decoration: none;" href="'.$_SERVER["PHP_SELF"].'?id='.$aux_query["Id"].'&del=true">Excluir</a></td>';
-                echo '</tr>';
-            }
-    ?>
+
+        <?php
+        $result = $obj_mysqli->query("SELECT * FROM `cliente`");
+        while ($aux_query = $result->fetch_assoc()) {
+            echo '<tr>';
+            echo '  <td>' . $aux_query["Id"] . '</td>';
+            echo '  <td>' . $aux_query["Nome"] . '</td>';
+            echo '  <td>' . $aux_query["Email"] . '</td>';
+            echo '  <td>' . $aux_query["Cidade"] . '</td>';
+            echo '  <td>' . $aux_query["UF"] . '</td>';
+            echo '<td><a style="color: green;text-decoration: none;" href="' . $_SERVER["PHP_SELF"] . '?Id=' . $aux_query["Id"] . '">Editar</a></td>';
+            echo '<td><a style="color: red;text-decoration: none;" href="' . $_SERVER["PHP_SELF"] . '?id=' . $aux_query["Id"] . '&del=true">Excluir</a></td>';
+            echo '</tr>';
+        }
+        ?>
     </table>
 </body>
+
 </html>

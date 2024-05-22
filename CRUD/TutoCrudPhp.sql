@@ -26,7 +26,8 @@ SET time_zone = "+00:00";
 --
 -- Estrutura para tabela `cliente`
 --
-
+CREATE DATABASE tutocrudphp;
+USE tutocrudphp;
 CREATE TABLE `cliente` (
   `Id` int(11) NOT NULL,
   `Nome` varchar(60) NOT NULL,
