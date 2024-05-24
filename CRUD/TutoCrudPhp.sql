@@ -44,27 +44,7 @@ INSERT INTO `cliente` (`Id`, `Nome`, `Email`, `Cidade`, `UF`) VALUES
 (1, 'fernando', 'fernando@gmail.com', 'Itapira', ''),
 (2, 'fernando', 'fernando@gmail.com', 'Itapira', 'sp'),
 (3, 'fernando', 'fernando@gmail.com', 'Itapira', 'sp'),
-(4, 'fernando', 'fernando@gmail.com', 'Itapira', 'sp'),
-(5, 'fernando', 'fernando@gmail.com', 'Itapira', 'sp'),
-(6, 'fernando', 'fernando@gmail.com', 'Itapira', 'sp'),
-(7, 'fernando', 'fernando@gmail.com', 'Itapira', 'sp'),
-(8, 'fernando', 'fernando@gmail.com', 'Itapira', 'sp'),
-(9, 'fernando', 'fernando@gmail.com', 'Itapira', 'sp'),
-(10, 'fernando', 'fernando@gmail.com', 'Itapira', 'sp'),
-(11, 'fernando', 'fernando@gmail.com', 'Itapira', 'sp'),
-(12, 'fernando', 'fernando@gmail.com', 'Itapira', 'sp'),
-(13, 'fernando', 'fernando@gmail.com', 'Itapira', 'sp'),
-(14, 'fernando', 'fernando@gmail.com', 'Itapira', 'sp'),
-(15, 'fernando', 'fernando@gmail.com', 'Itapira', 'sp'),
-(16, 'fernando', 'fernando@gmail.com', 'Itapira', 'sp'),
-(17, 'fernando', 'fernando@gmail.com', 'Itapira', 'sp'),
-(18, 'fernando', 'fernando@gmail.com', 'Itapira', 'sp'),
-(19, 'fernando', 'fernando@gmail.com', 'Itapira', 'sp'),
-(20, 'fernando', 'fernando@gmail.com', 'Itapira', 'sp'),
-(21, 'fernando', 'fernando@gmail.com', 'Itapira', 'sp'),
-(22, 'fernando', 'fernando@gmail.com', 'Itapira', 'sp'),
-(23, 'fernando', 'fernando@gmail.com', 'Itapira', 'sp'),
-(24, 'fernando', 'fernando@gmail.com', 'Itapira', 'sp');
+(4, 'fernando', 'fernando@gmail.com', 'Itapira', 'sp')
 
 --
 -- Índices para tabelas despejadas

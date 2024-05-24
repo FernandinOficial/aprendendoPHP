@@ -8,6 +8,11 @@ use TutoCrudPhp;
 --     Cidade VARCHAR(100),
 --     UF VARCHAR(2)
 -- )
-select * from Cliente;
+-- select * from Cliente;
 
--- DELETE FROM cliente WHERE id = ?;
+CREATE TABLE usuarios (
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nome VARCHAR(100),
+    usuario VARCHAR(100),
+    senha VARCHAR(100)
+);
