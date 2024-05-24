@@ -1,4 +1,4 @@
-# :book: Diário de BORDO
+# :book: Diário de BORDO :book:
 
 **30/04/2024**
 Aprendendo PHP com Formulários
