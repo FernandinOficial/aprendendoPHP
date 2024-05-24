@@ -10,9 +10,11 @@ use TutoCrudPhp;
 -- )
 -- select * from Cliente;
 
-CREATE TABLE usuarios (
-    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    nome VARCHAR(100),
-    usuario VARCHAR(100),
-    senha VARCHAR(100)
-);
+-- CREATE TABLE usuarios (
+--     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+--     nome VARCHAR(100),
+--     usuario VARCHAR(100),
+--     senha VARCHAR(100)
+-- );
+
+select * from usuarios;
