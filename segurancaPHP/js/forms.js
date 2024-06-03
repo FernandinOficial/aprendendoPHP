@@ -55,4 +55,29 @@ function regformhash(form, uid, email, password, conf)
         alert('Passwords must contain at least one number, one lowercase and one uppercase letter.  Please try again');
         return false;    
     }
+
+    //verificar se a senha é a mesma
+    if(password.value != conf.value)
+    {
+        alert('Your password and confirmation do not match. Please try again');        
+        form.password.focus();
+        return false;
+    }
+
+    //cria um elemento input, onde sera campo o para a senha com hash
+    var p = document.createElement("input");
+
+    //adicione um novo elemento ao nosso formulário
+    form.appendChild(p);
+    p.name = "p";
+    p.type = "hidden";
+    p.value = hex_sha512(password.value);
+
+    //senha simples nao enviar
+    password.value = "";    
+    conf.value = "";
+    
+    //finalmente, envie o form
+    form.submit();
+    return true;
 }
