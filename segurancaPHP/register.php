@@ -3,7 +3,7 @@ include_once 'includes/register.inc.php';
 include_once 'includes/functions.php';
 ?>
 <!DOCTYPE html>
-< lang="en">
+<lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -14,7 +14,7 @@ include_once 'includes/functions.php';
     <link rel="stylesheet" href="styles/main.css" />
 </head>
 
-<>
+
     <!-- Registration form to be output if the POST variables are not set or if the registration script caused an error. -->
     <h1>Register with us</h1>
     <?php
