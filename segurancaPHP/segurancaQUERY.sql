@@ -33,5 +33,5 @@ USE secure_login;
 --     'f9aab579fc1b41ed0c44fe4ecdbfcdb4cb99b9023abb241a6db833288f4eea3c02f76e0d35204a8695077dcf81932aa59006423976224be0390395bae152d4ef'
 -- );
 
--- SELECT * FROM members;
+SELECT * FROM members;
 
