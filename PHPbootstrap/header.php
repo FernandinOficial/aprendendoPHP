@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>CRUD</title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrap.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <style>
+    <style type="text/css">
         .box{
-            background-color: #f0f0f0;
+            background: #f0f0f0;
             padding: 20px;
         }
     </style>
