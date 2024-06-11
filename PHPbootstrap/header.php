@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>CRUD</title>
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrap.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <style type="text/css">
         .box{
             background: #f0f0f0;
