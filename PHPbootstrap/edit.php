@@ -58,3 +58,5 @@
         </div>  <!-- fechamento col-md-6 col-md-offset-3-->
     </div>  <!--fechamento row-->
 </div>  <!--fechamento container-->
+<?php
+    require_once 'footer.php';
