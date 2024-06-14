@@ -1,5 +1,5 @@
 -- create database TutoCrudPhp;
-use TutoCrudPhp;
+use tutocrudphp;
 
 -- create TABLE Cliente (
 --     Id INT PRIMARY KEY AUTO_INCREMENT,
@@ -7,8 +7,8 @@ use TutoCrudPhp;
 --     Email VARCHAR(150) NOT NULL,
 --     Cidade VARCHAR(100),
 --     UF VARCHAR(2)
--- )
--- select * from Cliente;
+-- );
+select * from Cliente;
 
 -- CREATE TABLE usuarios (
 --     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
