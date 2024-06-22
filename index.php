@@ -37,6 +37,7 @@
         }
         h2{
             margin-top: 5vh;
+            margin-bottom: 3vh;
         }
         h4 {
             display: flex;
@@ -68,12 +69,20 @@
             background-color: #0b0;
             transition: 500ms;
         }
-
-        .hidden {
-            display: none; /* Escondido inicialmente */
+        a{
+            text-decoration: none;
+            font-size: 25px;
+            color: black;
         }
+        a:hover{
+            text-decoration: underline;
+            color: #0a0;
+            transition: 500ms;
+        }
+
+        
         footer{
-            margin-top: 80vh;
+            margin-top: 60vh;
             padding: 5vh;
             background-color: black;
             opacity: 0.8;
@@ -108,18 +117,21 @@
         
         if(isset($_POST['name']) && !empty($_POST['name'])){
             echo "<script>document.getElementById('form').remove();</script>";  //deletar o form
-            echo "  <script>
-                        var element = document.getElementById('nav');
-                        element.classList.remove('hidden');
-                    </script>";
+
+            echo "<h2>Qual diretório deseja ir ".$_POST['name']." ?</h2>";
+            echo "<a href='APIs/'>APIs</a><br>";
+            echo "<a href='CRUD/'>CRUD</a><br>";
+            echo "<a href='imagens/'>imagens</a><br>";
+            echo "<a href='inicioPHP/'>inicioPHP</a><br>";
+            echo "<a href='Login/'>Login</a><br>";
+            echo "<a href='PHPbootstrap/'>PHPbootstrap</a><br>";
+            echo "<a href='segurancaPHP/'>segurancaPHP</a><br>";
+            echo "<a href='README.md'>README</a>";
         }
         else{
             echo "<script>alert('Por favor, insira um nome.');</script>";   //um alert para inserir um nome
         }
         ?>
-        <div class="hidden" id="nav">
-            <h3>Este é o menu de navegação</h3>
-        </div>
     </div>
     <footer>
         <hr>
