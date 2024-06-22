@@ -31,7 +31,7 @@ if (isset($_POST["nome"]) && isset($_POST["email"]) && isset($_POST["cidade"]) &
         $email = $_POST["email"];
         $cidade = $_POST["cidade"];
         $uf = $_POST["uf"];
-
+ 
         //Se o id for -1, vamos realizar o cadastro dos dados enviados.
         if ($id == -1) {
             $stmt = $obj_mysqli->prepare("INSERT INTO `cliente` (`nome`, `email`, `cidade`, `uf`) VALUES (?, ?, ?, ?)");
