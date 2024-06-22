@@ -1,7 +1,6 @@
 <?php
 session_start();
 // desativar a chave pois o github nao permite
-// $client_id = '294824647144-d7lpjonrdkmma1q42mi204itlv6sv5tk.apps.googleusercontent.com'; // Substitua com seu client_id correto
 $redirect_uri = 'http://localhost/google_oauth/callback.php'; // Certifique-se que este URI está registrado no Google Cloud Console
 $scope = 'email profile';
 $state = bin2hex(random_bytes(16));
