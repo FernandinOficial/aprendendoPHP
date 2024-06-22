@@ -1,4 +1,4 @@
-<?php
+<?php/*
 session_start();
 
 if (empty($_GET['state']) || ($_GET['state'] !== $_SESSION['oauth2state'])) {
@@ -10,7 +10,7 @@ if (isset($_GET['code'])) {
     $code = $_GET['code'];
 // desativar a chave pois o github nao permite
 
-    $token_url = 'https://oauth2.googleapis.com/token';
+    // $token_url = 'https://oauth2.googleapis.com/token';
     $token_data = [
         'code' => $code,
         'client_id' => $client_id,
@@ -46,5 +46,5 @@ if (isset($_GET['code'])) {
     exit();
 } else {
     echo 'Error: No code parameter returned';
-}
+}*/
 ?>
