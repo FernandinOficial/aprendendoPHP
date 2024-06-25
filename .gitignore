@@ -1,2 +1,4 @@
 # ignorar dir API
-/APIs
+/APIs/maps/.php
+/APIs/oAuth2.0google/.php
+/APIs/oAuth2.0google/.html
