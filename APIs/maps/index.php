@@ -72,7 +72,7 @@
             loading="lazy"
             allowfullscreen
             referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBHGROYpFDTJXdPYf2UtNuW7k2uAdEFeI8&q=<?php echo $rua;echo $number ?>,<?php echo $cidade; ?>+<?php echo $uf; ?>">
+            src="https://www.google.com/maps/embed/v1/place?key=YOUR_KEY=<?php echo $rua;echo $number ?>,<?php echo $cidade; ?>+<?php echo $uf; ?>">
         </iframe>
     </div>
 </body>

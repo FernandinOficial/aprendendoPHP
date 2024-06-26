@@ -9,8 +9,8 @@ if (empty($_GET['state']) || ($_GET['state'] !== $_SESSION['oauth2state'])) {
 if (isset($_GET['code'])) {
     $code = $_GET['code'];
 
-    $client_id = '294824647144-d7lpjonrdkmma1q42mi204itlv6sv5tk.apps.googleusercontent.com'; // Substitua com seu client_id correto
-    $client_secret = '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'; // Substitua com seu client_secret correto
+    $client_id = 'YOUR_CLIENT_ID'; // Substitua com seu client_id correto
+    $client_secret = 'YOUR_CLIENT_SECRET_ID'; // Substitua com seu client_secret correto
     $redirect_uri = 'http://localhost/google_oauth/callback.php'; // Certifique-se que este URI está registrado no Google Cloud Console
 
     $token_url = 'https://oauth2.googleapis.com/token';
