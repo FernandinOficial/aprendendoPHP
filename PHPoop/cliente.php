@@ -31,7 +31,9 @@
         function set_cidade($cidade){
             $this -> cidade = $cidade;
         }
-        funci
+        function set_cep($cep){
+            $this -> cep = $cep;
+        }
         function set_telefone($telefone){
             $this -> telefone = $telefone;
         }
