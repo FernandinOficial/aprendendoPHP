@@ -13,17 +13,16 @@
         private $descontinuado;
 
 
-        public function __construct($nomeProduto, $codigoFornecedor, $codigoCategorias, $quantidade){
+        public function __construct($nomeProduto, $codigoFornecedor, $codigoCategorias, $quantidadeUnidade, $precoUnitario, $unidadesEstoque, $unidadesPedidas, $nivelEstoque, $descontinuado){
             $this -> nomeProduto = $nomeProduto;
             $this -> codigoFornecedor = $codigoFornecedor;
             $this -> codigoCategorias = $codigoCategorias;
             $this -> quantidadeUnidade = $quantidadeUnidade;
-            $this -> 
-            $this -> 
-            $this -> 
-            $this -> 
-            $this -> 
-            $this -> 
+            $this -> precoUnitario = $precoUnitario;
+            $this -> unidadesEstoque = $unidadesEstoque;
+            $this -> unidadesPedidas = $unidadesPedidas;
+            $this -> nivelEstoque = $nivelEstoque;
+            $this -> descontinuado = $descontinuado;
         }
     }
 
