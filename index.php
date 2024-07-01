@@ -152,6 +152,7 @@
             echo "<a href='inicioPHP/'>inicioPHP</a><br>";
             echo "<a href='Login/'>Login</a><br>";
             echo "<a href='PHPbootstrap/'>PHPbootstrap</a><br>";
+            echo "<a href='PHPoop/'>PHPoop</a><br>";
             echo "<a href='segurancaPHP/'>segurancaPHP</a><br>";
             echo "<a href='README.md'>README</a>";
         } else {
