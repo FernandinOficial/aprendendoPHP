@@ -22,5 +22,18 @@
         }
 
         //metodos
+        function set_nome($nome){
+            $this -> nome = $nome;
+        }
+        function set_endereco($endereco){    
+            $this -> endereco = $endereco;
+        }
+        function set_cidade($cidade){
+            $this -> cidade = $cidade;
+        }
+        funci
+        function set_telefone($telefone){
+            $this -> telefone = $telefone;
+        }
     }
 ?>

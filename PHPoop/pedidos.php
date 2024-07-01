@@ -28,6 +28,12 @@
             $this -> cepDestino = $cepDestino;
             $this -> paisDestino = $paisDestino;
         }
+
+        
+        function set_dataPedido($dataPedido){
+            $this -> dataPedido = $dataPedido;
+        }
+        function set_
     }
 
 ?>
