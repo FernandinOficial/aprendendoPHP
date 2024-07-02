@@ -154,6 +154,7 @@
             echo "<a href='PHPbootstrap/'>PHPbootstrap</a><br>";
             echo "<a href='PHPoop/'>PHPoop</a><br>";
             echo "<a href='segurancaPHP/'>segurancaPHP</a><br>";
+            echo "<a href='testePHP/'>testePHP</a><br>";
             echo "<a href='README.md'>README</a>";
         } else {
             echo "<script>alert('Por favor, insira um nome.');</script>";   //um alert para inserir um nome
