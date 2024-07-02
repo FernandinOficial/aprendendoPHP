@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Justiça Eleitoral</h1>
+    <form action="if.php" method="post">
+        <label>Nome</label>
+        <br>
+        <input type="text" name="nome" required placeholder="Nome">
+        <br>
+        <label>CPF</label>
+        <br>
+        <input type="text" name="cpf" required placeholder="000.000.000-00" maxlength="11">
+        <br>
+        <label>Idade</label>
+        <br>
+        <input type="number" name="idade" min="1" required placeholder="Idade">
+        <br>
+        <br>
+        <input type="submit" value="Executar">
+    </form>
+</body>
+</html>
