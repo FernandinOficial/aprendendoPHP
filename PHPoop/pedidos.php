@@ -33,7 +33,8 @@
         function set_dataPedido($dataPedido){
             $this -> dataPedido = $dataPedido;
         }
-        function set_
+        // function set_
+    
     }
 
 ?>

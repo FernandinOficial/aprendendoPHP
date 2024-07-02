@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    <a href="alunos.php">Alunos TDD</a>
+    <a href="alunosTDD.php">Alunos TDD</a>
     <fieldset>
         <h1>Temporizador</h1>
 
