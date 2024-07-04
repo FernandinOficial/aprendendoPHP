@@ -11,6 +11,10 @@
             text-decoration: none;
             font-size: 25px;
         }
+        a:hover{
+            color: green;
+            transition: 500ms;
+        }
         fieldset{
             margin-left: auto;
             margin-right: auto;
@@ -27,6 +31,8 @@
 
 <body>
     <a href="alunosTDD.php">Alunos TDD</a>
+    <br>
+    <a href="animalUnit.php">animalUnit</a>
     <fieldset>
         <h1>Temporizador</h1>
 
