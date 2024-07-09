@@ -1,1 +1,1 @@
-{"version":1,"defects":{"CalculadoraTest::testSoma":8},"times":{"CalculadoraTest::testSoma":0.946}}
+{"version":1,"defects":{"CalculadoraTest::testSoma":8,"FizzBuzzTest::testInstace":8,"testePHP\\FizzBuzzTest::testInstace":8,"testePHP\\FizzBuzzTest::testNumeros":8,"testePHP\\FizzBuzzTest::testInstance":8},"times":{"CalculadoraTest::testSoma":0.8,"FizzBuzzTest::testInstace":0.028,"testePHP\\FizzBuzzTest::testInstace":0.022,"testePHP\\FizzBuzzTest::testNumeros":0.001,"testePHP\\FizzBuzzTest::testInstance":0.026}}
