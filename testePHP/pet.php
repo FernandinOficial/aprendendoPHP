@@ -1,5 +1,7 @@
 <?php 
 
+use \PHPUnit\Framework\TestCase;
+
     class pet{
         private $nome;
         private $idade;
@@ -18,6 +20,10 @@
         public function comer(){
             return "Comendo...";
         }
+    }
+
+    class petTest extends TestCase{
+        
     }
 
     //instanciando a classe com atributos
