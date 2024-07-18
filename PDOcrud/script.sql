@@ -9,3 +9,5 @@ CREATE TABLE contatos(
     celular VARCHAR(15) DEFAULT NULL,
     PRIMARY KEY(id)   -- busca pelo id
 )
+
+SELECT * FROM contatos; -- verificar tabela
