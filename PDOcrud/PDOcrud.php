@@ -104,7 +104,7 @@
             <th>Ações</th>
         </tr>
         <?php 
-            //realiza o papel READ - recupera os dados e mostra na tela
+            //realiza o papel READ - recupera os dados e mostra na tela (PAG 8)
             try{
                 $stmt = $conexao -> prepare("SELECT * FROM contatos");
 
