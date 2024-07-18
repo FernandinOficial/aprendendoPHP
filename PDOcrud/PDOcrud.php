@@ -21,7 +21,7 @@
         $conexao -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);    //setAttribute permite adicionar atributos no objeto da conexão
         $conexao -> exec("set names utf8");     //por causa de letras e acentos especiais: execução no banco de dados
     }catch(PDOException $erro){     //erros gerados pelo PDO
-        echo "Erro na conexão:". $erro -> getMessage();
+        echo "Erro na conexão: ". $erro -> getMessage();
     }
 
     // CREATE no banco de dados
@@ -46,7 +46,7 @@
                 throw new PDOException("ERRO: Não foi possível executar a declaração SQL");    //em caso do if execute nao funcionar
             }
         }catch(PDOException $erro){
-            echo "Erro:". $erro -> getMessage();    //caso a inserção ou o codigo ou algo de falha
+            echo "Erro: ". $erro -> getMessage();    //caso a inserção ou o codigo ou algo de falha
         }
     }
 
@@ -96,5 +96,35 @@
             <input type="reset" value="Novo">
         <hr>
     </form>
+    <table border="1" width="100%">
+        <tr>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Celular</th>
+            <th>Ações</th>
+        </tr>
+        <?php 
+            //realiza o papel READ - recupera os dados e mostra na tela
+            try{
+                $stmt = $conexao -> prepare("SELECT * FROM contatos");
+
+                if($stmt -> execute()){
+                    while($rs = $stmt -> fetch(PDO::FETCH_OBJ)){    //repetiçao dos contatos
+                        echo "<tr>";
+                        echo "<td>".$rs -> nome."</td><td>".$rs -> email."</td><td>".$rs -> celular
+                                   ."</td><td><center><a href=\"\">[Alterar]</a>"
+                                   ."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+                                   ."<a href=\"\">[Exluir]</a></center></td>";
+                        echo "<tr>";
+                    }
+                }else{
+                    echo "Erro: Não foi possível recuperar os dados do banco de dados";
+                }
+            }catch(PDOException $erro){
+                echo "Erro: ". $erro -> getMessage();
+            }
+        
+        ?>
+    </table>
 </body>
 </html>
