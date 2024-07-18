@@ -50,6 +50,26 @@
         }
     }
 
+    //UPDATE
+    if(isset($_REQUEST["act"]) && $_REQUEST["act"] == "upd" && $id != ""){      //buscando a ação e o id do contato
+        try{
+            $stmt = $conexao -> prepare("SELECT * FROM contatos WHERE id = ?");
+            $stmt -> bindParam(1, $id, PDO::PARAM_INT);     //parametro para o SELECT
+
+            if($stmt -> execute()){
+                $rs = $stmt -> fetch(PDO::FETCH_OBJ);     //Result Set busca o resultado
+                $id = $rs -> id;    
+                $nome = $rs -> nome;    //nome com Result Set pelo nome e assim por diante
+                $email = $rs -> email;
+                $celular = $rs -> celular;
+            }else{
+                throw new PDOException("Erro: Não foi possível executar a declaração SQL");     //ocorreu erro durante a inserção do UPDATE
+            }
+        }catch(PDOException $erro){
+            echo "Erro: ". $erro -> getMessage();
+        }
+    }
+
 ?>
 
 <!DOCTYPE html>
@@ -60,12 +80,12 @@
     <title>Agenda de Contatos</title>
 </head>
 <body>
-    <form action="?act=save" method="post" name="form1">
+    <form action="?act=save" method="post" name="form1">    <!--refresh de tela-->
         <h1>Agenda de Contatos</h1>
         <hr>
 
             <!--recurso de update do id da tabela-->
-            <input type="hidden" name="id" <?php 
+            <input type="hidden" name="id" <?php    
             if (isset($id) && $id != null || $id != ""){
                 echo "value=\"{$id}";     //vai inserir o valor recebido da variavel no input
             }
@@ -112,9 +132,13 @@
                     while($rs = $stmt -> fetch(PDO::FETCH_OBJ)){    //repetiçao dos contatos
                         echo "<tr>";
                         echo "<td>".$rs -> nome."</td><td>".$rs -> email."</td><td>".$rs -> celular
-                                   ."</td><td><center><a href=\"\">[Alterar]</a>"
-                                   ."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
-                                   ."<a href=\"\">[Exluir]</a></center></td>";
+                                   ."</td><td>
+                                        <center>
+                                            <a href=\"?act=upd&id=".$rs -> id."\">[Alterar]</a>"    //lidos no refresh
+                                                ."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+                                          ."<a href=\"?act=del&id=".$rs -> id."\">[Exluir]</a>
+                                        </center>
+                                   </td>";
                         echo "<tr>";
                     }
                 }else{
