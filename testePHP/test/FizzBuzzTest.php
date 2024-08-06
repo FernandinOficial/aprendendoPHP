@@ -5,6 +5,7 @@ namespace testePHP; // adicionado o namespace
 use PHPUnit\Framework\TestCase;
 use testePHP\FizzBuzz;
 
+require_once 'FizzBuzz.php';
 final class FizzBuzzTest extends TestCase{
     public function testInstace(): void     //instanciar um objeto para colocar a classe FizzBuzz
     {  

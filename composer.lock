@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9b7e305528022d6f07a1a1596a96fe37",
+    "content-hash": "a50aa7a4aac6a4ff483de5f21554c3ee",
     "packages": [],
     "packages-dev": [
         {
@@ -568,16 +568,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "11.2.6",
+            "version": "11.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "1dc0fedac703199e8704de085e47dd46bac0dde4"
+                "reference": "ece3536c22fc5113906a42e7e82de00baaef36d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/1dc0fedac703199e8704de085e47dd46bac0dde4",
-                "reference": "1dc0fedac703199e8704de085e47dd46bac0dde4",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/ece3536c22fc5113906a42e7e82de00baaef36d0",
+                "reference": "ece3536c22fc5113906a42e7e82de00baaef36d0",
                 "shasum": ""
             },
             "require": {
@@ -601,7 +601,7 @@
                 "sebastian/comparator": "^6.0",
                 "sebastian/diff": "^6.0",
                 "sebastian/environment": "^7.0",
-                "sebastian/exporter": "^6.1.2",
+                "sebastian/exporter": "^6.0",
                 "sebastian/global-state": "^7.0",
                 "sebastian/object-enumerator": "^6.0",
                 "sebastian/type": "^5.0",
@@ -616,7 +616,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "11.2-dev"
+                    "dev-main": "11.0-dev"
                 }
             },
             "autoload": {
@@ -648,7 +648,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.2.6"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.0.0"
             },
             "funding": [
                 {
@@ -664,7 +664,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-07-03T05:51:49+00:00"
+            "time": "2024-02-02T06:12:57+00:00"
         },
         {
             "name": "sebastian/cli-parser",
