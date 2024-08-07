@@ -1,8 +1,8 @@
 <?php
-
     namespace testePHP;     //declarando o namespace
-
-    class FizzBuzz      //instanciando um classe
+    use \PHPUnit\Framework\TestCase;
+    
+    class FizzBuzz extends TestCase      //instanciando um classe
     {
         public $resultado;   //criando um resultado
 
