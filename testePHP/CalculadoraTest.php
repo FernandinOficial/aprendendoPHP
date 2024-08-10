@@ -10,7 +10,6 @@ class CalculadoraTest extends TestCase {
     }
 }
 
-// require_once 'calculadora.php';
 // class Calculadora {
 //     public function soma($a, $b) {
 //         return $a + $b;

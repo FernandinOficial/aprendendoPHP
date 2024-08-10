@@ -1,4 +1,9 @@
-# ignorar dir API
+# ignorar APIs
 /APIs/maps/.php
 /APIs/oAuth2.0google/.php
 /APIs/oAuth2.0google/.html
+
+# ignorar os arquivos relacionados à PHPUnit e Testes Unitários
+/vendor/
+/composer.json
+/composer.lock
