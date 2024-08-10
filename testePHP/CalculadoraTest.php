@@ -10,6 +10,7 @@ class CalculadoraTest extends TestCase {
     }
 }
 
+// Para ocorrer corretamente DESCOMENTE a seguir:
 // class Calculadora {
 //     public function soma($a, $b) {
 //         return $a + $b;
