@@ -8,3 +8,6 @@ Aprendendo sobre Loops de repetição DoWhile, While, For, Foreach, Arrays
 
 **24/05/2024**
 Fazendo um sistema de Login com usuários
+
+**01/08/2024**
+Realizando testes unitários e TDD, tutorial a seguir:
