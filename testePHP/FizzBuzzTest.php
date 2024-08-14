@@ -1,11 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace testePHP; // adicionado o namespace
-
 use PHPUnit\Framework\TestCase;
 use testePHP\FizzBuzz;
 
-require_once 'FizzBuzz.php';
+include_once 'FizzBuzz.php';
 final class FizzBuzzTest extends TestCase{
     public function testInstace(): void     //instanciar um objeto para colocar a classe FizzBuzz
     {  
@@ -17,7 +15,7 @@ final class FizzBuzzTest extends TestCase{
         //todos os testes do php Unit começam com o assert
     }
 
-    public function testNumeros(): void
+    public function testNumeros()
     {
         //recebe os valores
         $faixa = [0,1,2,3];     //recebe uma array
@@ -27,7 +25,7 @@ final class FizzBuzzTest extends TestCase{
 
         //resultado esperado ao enviar a faixa
         $expected = [0,1,2,'fizz'];
-        $this->assertEquals($expected, $fizzBuzz->resultado);
+        $this->assertEquals($expected, $fizzBuzz -> resultado);
 
     }
 }

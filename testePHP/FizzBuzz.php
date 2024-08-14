@@ -32,3 +32,10 @@
     }
 
 ?>
+<?php
+
+    function fizzBuzz (){
+        
+    }
+
+?>
