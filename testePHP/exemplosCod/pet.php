@@ -2,7 +2,7 @@
 
 use \PHPUnit\Framework\TestCase;
 
-    class pet{
+    class pet extends TestCase{
         private $nome;
         private $idade;
 
